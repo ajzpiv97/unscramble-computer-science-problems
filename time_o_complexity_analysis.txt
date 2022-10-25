@@ -19,7 +19,7 @@ Task 2:
 
 Task 3:
  - Time Complexity - O(nlog(n))
- - This algorithm is superlinear time because the sort() function for sorting lists uses time sort algorithm
+ - This algorithm is super-linear time because the sort() function for sorting lists uses time sort algorithm
    which the time complexity for it is O(nlog(n)). The time complexity for the for loop its actually O(2kn + 5),
     however, we know that the phone number length is max 11 characters transforming to O(22n+5). Finally, the last two
     methods, one for converting the dictionary keys into a list that is O(n) and sum the dictionary is O(n) as well.
@@ -29,7 +29,7 @@ Task 3:
    
 Task 4:
  - Time Complexity - O(nlog(n))
- - This algorithm is superlinear time because the sort() function for sorting lists uses time sort algorithm
+ - This algorithm is super-linear time because the sort() function for sorting lists uses time sort algorithm
    which the time complexity for it is O(nlog(n)). The time complexity for the first for loop would be O(3n). The append
    operation in the list functions as a stack, so it always appends at the end of the list result in O(1). The other for loop
    time complexity is O(2n). The operation to convert a list to set is also O(n). Therefore, the total time complexity for
