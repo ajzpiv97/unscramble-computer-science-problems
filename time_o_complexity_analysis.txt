@@ -26,7 +26,6 @@ Task 3:
     Therefore, the total time complexity solution is actually O(nlog(n) + 22n+5 + n + n) => O(nlog(n) + 24n + 5).
     Because of higher order, the Big notation results in O(nlog(n))
 
-   
 Task 4:
  - Time Complexity - O(nlog(n))
  - This algorithm is super-linear time because the sort() function for sorting lists uses time sort algorithm
