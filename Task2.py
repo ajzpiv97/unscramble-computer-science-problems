@@ -20,3 +20,18 @@ Print a message:
 September 2016.".
 """
 
+phone_dict = {}
+
+for record in calls:
+    phone_dict[record[0]] = int(record[3]) + phone_dict.get(record[0], 0)
+    phone_dict[record[1]] = int(record[3]) + phone_dict.get(record[1], 0)
+
+
+max_value = 0
+phone_number = 0
+for key, value in phone_dict.items():
+    if value > max_value:
+        max_value = value
+        phone_number = key
+
+print(f"{phone_number} spent the longest time, {max_value} seconds, on the phone during September 2016.")

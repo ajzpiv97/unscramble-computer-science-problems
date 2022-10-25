@@ -1,0 +1,36 @@
+Analysis
+
+Task 0:
+ - Time Complexity - O(1)
+ - The algorithm is constant time because it does not depend on the size of either calls or text list
+
+Task 1:
+ - Time Complexity - O(n)
+ - The algorithm is linear time because it requires to iterate N times the length of each list so each for loop
+   so each for loop account for O(n) resulting in O(2n). This however, following the Big O coefficient rule of
+   dropping constant, the resultant time complexity is O(n)
+
+Task 2:
+ - Time Complexity - O(n)
+ - The algorithm is linear time because it requires to iterate N times the length of each list so each for loop
+   so each for loop account for O(n) resulting in O(2n).
+   This however, following the Big O coefficient rule of dropping constant, the resultant time complexity is O(n).
+   Dictionary operations are all O(1), so they are constant time operations
+
+Task 3:
+ - Time Complexity - O(nlog(n))
+ - This algorithm is superlinear time because the sort() function for sorting lists uses time sort algorithm
+   which the time complexity for it is O(nlog(n)). The time complexity for the for loop its actually O(2kn + 5),
+    however, we know that the phone number length is max 11 characters transforming to O(22n+5). Finally, the last two
+    methods, one for converting the dictionary keys into a list that is O(n) and sum the dictionary is O(n) as well.
+    Therefore, the total time complexity solution is actually O(nlog(n) + 22n+5 + n + n) => O(nlog(n) + 24n + 5).
+    Because of higher order, the Big notation results in O(nlog(n))
+
+   
+Task 4:
+ - Time Complexity - O(nlog(n))
+ - This algorithm is superlinear time because the sort() function for sorting lists uses time sort algorithm
+   which the time complexity for it is O(nlog(n)). The time complexity for the first for loop would be O(3n). The append
+   operation in the list functions as a stack, so it always appends at the end of the list result in O(1). The other for loop
+   time complexity is O(2n). The operation to convert a list to set is also O(n). Therefore, the total time complexity for
+   my solution is O(nlog(n)+ 6n), which worst case is O(nlog(n))

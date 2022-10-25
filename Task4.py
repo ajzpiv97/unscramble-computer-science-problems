@@ -25,3 +25,17 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
+telemarketers = []
+texters_and_receivers = []
+for sender, receiver, timestamp in texts:
+    texters_and_receivers.append(sender)
+    texters_and_receivers.append(receiver)
+
+for caller, receiver, timestamp, duration in calls:
+    texters_and_receivers.append(receiver)
+
+for caller, receiver, timestamp, duration in calls:
+    if caller not in texters_and_receivers:
+        telemarketers.append(caller)
+telemarketers.sort()
+print(f"These numbers could be telemarketers:\n", '\n'.join(set(telemarketers)))

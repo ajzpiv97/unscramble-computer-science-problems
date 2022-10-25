@@ -44,3 +44,31 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+"""
+Part A
+"""
+
+area_codes = {}
+
+for caller, receiver, timestamp, duration in calls:
+    if caller[0:5] == '(080)':
+        is_fixed_line = receiver[0:2] == '(0'
+        if is_fixed_line:
+            second_bracket = receiver.find(')')
+            area_codes[receiver[1:second_bracket]] = 1 + area_codes.get(receiver[1:second_bracket], 0)
+
+        space = receiver.find(' ')
+        if space > -1:
+            area_codes[receiver[0:4]] = 1 + area_codes.get(receiver[0:4], 0)
+
+        telemark = receiver[0:3]
+        if telemark == '140':
+            area_codes[telemark] = 1 + area_codes.get(telemark, 0)
+
+unique = list(area_codes.keys())
+unique.sort()
+print("The numbers called by people in Bangalore have codes:\n", '\n'.join(unique))
+
+print(f"\n{round(area_codes['080'] * 100 / sum(area_codes.values()), 2)} percent of calls from fixed"
+      f" lines in Bangalore are calls to other fixed lines in Bangalore.")
