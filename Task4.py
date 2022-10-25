@@ -35,7 +35,7 @@ for caller, receiver, timestamp, duration in calls:
     texters_and_receivers.append(receiver)
 
 for caller, receiver, timestamp, duration in calls:
-    if caller not in texters_and_receivers:
+    if caller not in texters_and_receivers and caller not in telemarketers:
         telemarketers.append(caller)
 telemarketers.sort()
-print(f"These numbers could be telemarketers:\n", '\n'.join(set(telemarketers)))
+print(f"These numbers could be telemarketers:\n", '\n'.join(telemarketers))
